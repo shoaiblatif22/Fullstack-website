@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { IProduct } from "../../../models/product";
+import {ErrorResponse} from "../../../models/error"
 
+  
 const products = Array(100)
   .fill(0)
   .map((_, i) => {
@@ -16,7 +18,7 @@ const products = Array(100)
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<IProduct>
+  res: NextApiResponse<IProduct|ErrorResponse>
 ) {
   const productId = Number(req.query.id);
   const product = products.find((p) => p.productId === productId);
