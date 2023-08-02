@@ -18,21 +18,21 @@ export default function Home() {
     <div className="min-h-screen flex flex-col justify-center items-center">
       <main className="py-20 flex flex-col flex-1 justify-center items-center">
         <h1 className="m-0 leading-snug text-6xl text-center">
-          Welcome to{" "}
-          <a
+          {/* Welcome to{" "} */}
+          {/* <a
             className="text-blue-600 no-underline hover:underline focus:underline"
             href="https://nextjs.org"
           >
             Next.js!
-          </a>
+          </a> */}
         </h1>
 
-        <p className="leading-normal text-2xl text-center">
+        {/* <p className="leading-normal text-2xl text-center">
           Get started by editing{" "}
           <code className="bg-gray-100 rounded-md p-3 text-lg font-mono">
             pages/index.js
           </code>
-        </p>
+        </p> */}
 
         <div className="mt-10 flex flex-wrap flex-col sm:flex-row w-full justify-center items-center">
           {products.map((p) => (
