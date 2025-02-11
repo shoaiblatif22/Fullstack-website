@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import Header from "./header";
 
 type props = {
@@ -10,7 +11,9 @@ const Layout = ({ children }: props) => {
     <>
       <Header />
       {children}
+      <Footer />
     </>
+
   );
 };
 

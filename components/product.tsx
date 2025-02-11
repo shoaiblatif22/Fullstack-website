@@ -4,7 +4,7 @@ import { IProduct } from "../models/product";
 
 const Product: React.FC<IProduct> = ({ productId, productName, category, sellingPrice, image }) => {
   return (
-    <Link href={`/${productId}`}>
+    <Link href={`${productId}`}>
       <a className="m-3 w-96 text-left no-underline border border-solid border-gray-200 rounded-lg hover:shadow-md focus:shadow-md focus:outline-none">
         <div
           id="image"
