@@ -20,10 +20,11 @@
     "incremental": true
   },
   "include": [
+    "src",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app", "components", "contexts", "pages"  ],
   "exclude": [
     "node_modules"
   ]
