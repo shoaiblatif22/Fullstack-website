@@ -1,2 +1,0 @@
-run = 'yarn run dev'
-entrypoint = 'pages/CategoriesPage.tsx'
