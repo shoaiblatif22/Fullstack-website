@@ -1,5 +1,5 @@
 import React from 'react';
-import { CategoriesPage } from './CategoriesPage';
+import { CategoriesPage } from './categoriesPage';
 
 
 const ShopPage = () => (
