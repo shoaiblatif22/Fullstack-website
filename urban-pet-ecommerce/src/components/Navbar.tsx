@@ -1,5 +1,6 @@
 "use client"
-import React, {useState} from "react";
+import Link from 'next/link';
+import React, { useState } from "react";
 import { ShoppingCart, Menu, User } from "lucide-react";
 export const Navbar = () => {
   const [cartCount] = useState(0);
@@ -11,12 +12,12 @@ export const Navbar = () => {
               <h1 className="text-2xl font-bold text-brown-800">Urban Pet</h1>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-brown-800 hover:text-sienna-500 font-medium">
+              <Link href="/" className="text-brown-800 hover:text-sienna-500 font-medium">
                 Home
-              </a>
-              <a href="#" className="text-brown-600 hover:text-sienna-500 transition-colors">
+              </Link>
+              <Link href="/shop" className="text-brown-600 hover:text-sienna-500 transition-colors">
                 Shop
-              </a>
+              </Link>
               <a href="#" className="text-brown-600 hover:text-sienna-500 transition-colors">
                 Categories
               </a>
