@@ -2,7 +2,7 @@ import React from "react";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import './globals.css'
+import "../../styles/globals.css";
 
 export const metadata = {
   title: "Urban Pet - Premium Pet Supplies & Accessories",
