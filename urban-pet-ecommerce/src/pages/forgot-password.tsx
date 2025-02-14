@@ -1,7 +1,9 @@
+"use client"
 import React, { useState } from "react";
 import { Mail, ArrowRight, Loader } from "lucide-react";
-import { useAuth } from "../../contexts/AuthContext";
-export const ForgotPasswordForm = () => {
+import { useAuth } from "../contexts/AuthContext";
+import Link from "next/link";
+export default function ForgotPasswordForm(){
   const {
     resetPassword,
     loading,
@@ -66,7 +68,7 @@ export const ForgotPasswordForm = () => {
                 </>}
             </button>
             <div className="text-center">
-              <Link to="/login" className="text-sm font-medium text-sienna-500 hover:text-sienna-600">
+              <Link href="/login" className="text-sm font-medium text-sienna-500 hover:text-sienna-600">
                 Back to Sign in
               </Link>
             </div>
