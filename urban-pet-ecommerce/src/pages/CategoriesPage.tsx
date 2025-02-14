@@ -1,4 +1,4 @@
-import React, { useMemo, useState, memo } from "react";
+import React, { useMemo, useState } from "react";
 import { Sidebar } from "../components/shop/Sidebar";
 import { SearchBar } from "../components/shop/SearchBar";
 import { SEO } from "../components/SEO";
