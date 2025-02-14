@@ -1,7 +1,9 @@
+'use client'
 import React, { useState } from "react";
 import { Mail, Lock, User, ArrowRight, Loader, Check, X } from "lucide-react";
-import { useNavigate, Link } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthContext";
+import Link from 'next/link'
+import { useAuth } from "../contexts/AuthContext";
+import { useRouter } from "next/router";
 const PASSWORD_REQUIREMENTS = [{
   id: "length",
   label: "At least 8 characters",
@@ -23,8 +25,8 @@ const PASSWORD_REQUIREMENTS = [{
   label: "At least one special character",
   regex: /[!@#$%^&*]/
 }];
-export const RegisterForm = () => {
-  const navigate = useNavigate();
+export default function RegisterForm() {
+  const router = useRouter(); 
   const {
     register,
     loading,
@@ -67,9 +69,9 @@ export const RegisterForm = () => {
     if (!validateForm()) return;
     try {
       await register(formData.name, formData.email, formData.password);
-      navigate("/");
+      router.push("/login");
     } catch (err) {
-      // Error is handled by the AuthContext
+
     }
   };
   const checkRequirement = (requirement: {
@@ -175,7 +177,7 @@ export const RegisterForm = () => {
           <div className="text-center">
             <span className="text-sm text-brown-600">
               Already have an account?{" "}
-              <Link to="/login" className="font-medium text-sienna-500 hover:text-sienna-600">
+              <Link href="/login" className="font-medium text-sienna-500 hover:text-sienna-600">
                 Sign in
               </Link>
             </span>

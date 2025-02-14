@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Mail, ArrowRight, Loader } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 export const ForgotPasswordForm = () => {
   const {
